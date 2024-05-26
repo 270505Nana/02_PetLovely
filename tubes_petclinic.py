@@ -47,22 +47,26 @@ def grooming_cat(jenis_hewan):
     print("|=======================================================|")
 
 def print_nota(reservasi):
-#   groomings = [""]
-#   total_harga = 0
-  print("\n--- Nota Reservasi Grooming ---")
-  for idx, data in enumerate(reservasi):
-    print("Reservasi", idx + 1)
+    groomings = ["Grooming kering", "Grooming basic", "Grooming shampoo Anti kutu"
+                , "Grooming shampoo Anti jamur", "Grooming shampoo Anti kutu & jamur"
+                , "Grooming shampoo whitening"]
+    total_harga = 0
+    print("\n--- Nota Reservasi Grooming ---")
+#   perulangan indexnya masi eror, dia malah jadi banyak gitu
+#   for idx, data in enumerate(reservasi):
+    # print("Reservasi", idx + 1)
+    print("Reservasi")
     print("Nama Pemilik:",nama_pemilik)
     print("Nomor Pemilik:", no_pemilik)
     print("Alamat Pemilik:", alamat_pemilik)
     print("Nama Hewan:", nama_hewan)
     print("Kondisi Hewan:", kondisi_hewan)
-#     print("Pilihan Grooming:", groomings[int(data["pilihan_grooming"])-1])
-#     harga = calculate_price(data["pilihan_grooming"], data["jenis_hewan"])
-#     print("Harga:", harga)
-#     total_harga += harga
+    print("Pilihan Grooming:", groomings[int(data["pilihan_grooming"])-1])
+#   harga = calculate_price(data["pilihan_grooming"], data["jenis_hewan"])
+#   print("Harga:", harga)
+#   total_harga += harga
 #   print("Total Harga: Rp", total_harga)
-  print("---------------------------------")
+    print("---------------------------------")
 
 # Loop untuk masukin menu
 while True:
