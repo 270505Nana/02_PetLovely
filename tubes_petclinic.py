@@ -1,6 +1,3 @@
-# Get user input for owner's name, animal's name, and animal's condition
-
-
 # jenis hewan
 jenis_hewan = """
 |==============================================|
@@ -12,12 +9,12 @@ jenis_hewan = """
 """
 
 #  NO 1
-# Menampilkan daftar makanan dan minuman
+# Menampilkan jenis hewan
 print("|==============================================|")
 print("|              Pet Shop Lovely hart !          |")
 print(jenis_hewan)
 
-
+# set nilai awal
 total_treatment_ajg = 0
 total_treatment_cat = 0
 # array buat nyimpen treatment yang dipilih, misal cus punya 2 hewan maka akan disimpan dimasing" array
@@ -37,6 +34,7 @@ def grooming_anjing(jenis_hewan):
     print("|=======================================================|")
 
 def grooming_cat(jenis_hewan):
+    # parameter jenis hewan yg diinput sama user
     print("|=======================================================|")
     print("|             Pilihan grooming untuk kucing             |")
     print("|=======================================================|")
@@ -66,13 +64,14 @@ def print_nota(reservasi):
 #   print("Total Harga: Rp", total_harga)
   print("---------------------------------")
 
-# Loop untuk menu anjing
+# Loop untuk masukin menu
 while True:
     jenis_hewan = int(input("Masukkan jenis hewan (1-2):"))
+    # ini dijadikan parameter
 
     if jenis_hewan == 0:
         
-        # diinput setelah costumer selesai input jenis hewan, banyak hewan, dn treatment yang dipilih.
+        # diinput setelah costumer selesai input jenis hewan, banyak hewan, dan treatment yang dipilih.
         nama_pemilik = input("Masukkan nama pemilik hewan: ")
         no_pemilik = input("Masukkan no pemilik hewan: ")
         alamat_pemilik = input("Masukkan alamat pemilik hewan: ")
@@ -98,8 +97,9 @@ while True:
                             , "Grooming shampoo whitening"][pilihan_treatment - 1]
             total_treatment_ajg += harga * banyak_hewan
             anjing.append((menu_treatment, banyak_hewan, harga * banyak_hewan)) 
-            print(anjing) #testing apakah data yang dimasukkan tersimpan.
             # untuk menghitung total biayanya
+            print(anjing) #testing apakah data yang dimasukkan tersimpan.
+            
         else:
             print("Pilihan tidak valid.")
     
@@ -117,7 +117,10 @@ while True:
                             , "Grooming shampoo whitening"][pilihan_treatment - 1]
             total_treatment_cat += harga * banyak_hewan
             kucing.append((menu_treatment, banyak_hewan, harga * banyak_hewan)) 
-            print(kucing) #testing apakah data yang dimasukkan tersimpan.
             # untuk menghitung total biayanya
+            print(kucing) #testing apakah data yang dimasukkan tersimpan.
+        
         else:
             print("Pilihan tidak valid.")
+
+# handling error else selain 1/2
